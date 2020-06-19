@@ -1,0 +1,50 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background: lightgreen;
+    margin: 20% 40%;
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px 30px;
+    width: 160px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.lateral-triangle{
+    /* to prevent displacement */
+    transform: translateX(0);
+}
+
+/* Here the characteristics of the triangle are defined */
+div.lateral-triangle:before{
+    /* content is required, empty for this animation */
+    content: '';
+
+    /* duration time for the transition */
+    transition-duration: 0.3s;
+
+    border-style: solid;
+    border-width: 15px 15px 15px 0px;
+    border-color: transparent
+                    lightgreen
+                    transparent
+                    transparent;
+
+    /* position absolute, the element will be show over anithing else */
+    position: absolute;
+    /* 
+        left: 0px /> the element will be display on the left bound
+        top: 50% -> the elements starts to be drawn in 50% of the box
+    */
+    left: 0px;
+    top: 50%;
+    /* with this attribute the triangle elements is printed exactly in the middle
+        this shold be equals to the height element
+    */
+    margin-top: -15px;
+}
+
+/* with this, the element has a displacement of 20px out of the box */
+div.lateral-triangle:hover:before{
+    left: -15px
+}

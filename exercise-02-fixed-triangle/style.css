@@ -1,0 +1,66 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background: orange;
+    margin: 20% 40%;
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px 30px;
+    width: 160px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.fixed-triangle{
+    /* to prevent displacement */
+    transform: translateX(0);
+    transition-duration: 0.3s;
+}
+
+/* Here the characteristics of the triangle are defined */
+div.fixed-triangle:before{
+    /* content is required, empty for this animation */
+    content: '';
+
+    /* duration time for the transition */
+    transition-duration: 0.3s;
+
+    border-style: solid;
+    /* 
+        border-width: top, right, bottom, left 
+            the side where you want to point to, should be 0px
+    */
+    border-width: 0px 20px 20px 20px;
+    /*
+        the colors for each side should be transparent
+            except for the opposite of where you want to point.
+            eje: if you want point to left, the color should be apply to right side.
+                if you want to point to top, the color should be apply to bottom side.
+    */
+    border-color: transparent
+                    transparent
+                    orange
+                    transparent;
+
+    /* position absolute, the element will be show over anithing else */
+    position: absolute;
+    /* 
+        left: 0px /> the element will be display on the left bound
+        top: 50% -> the elements starts to be drawn in 50% of the box
+    */
+    top: 0px;
+    left: 50%;
+    /* with this attribute the triangle elements is printed exactly in the middle
+        this shold be equals to the height element
+    */
+    margin-left: -20px;
+}
+div.fixed-triangle:hover{
+    transform: translateY(20px);
+}
+/* 
+    with this, the element has a displacement of 20px out of the box 
+        the side should be where you want to point to
+*/
+div.fixed-triangle:hover:before{
+    top: -20px
+}
