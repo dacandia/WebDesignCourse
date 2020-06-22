@@ -1,0 +1,20 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background: darkgoldenrod;
+    margin: 20% 40%;
+    text-align: center;
+    font-weight: bolder;
+    padding: 15px 30px;
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.blurred-shadow{
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 1px rgba(0,0,0,1);
+}
+
+div.blurred-shadow:hover{
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.6);
+}

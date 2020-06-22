@@ -1,0 +1,51 @@
+div{
+    font-family: Arial;
+    background: lightcoral;
+    margin: 20% 40%;
+    text-align: center;
+    font-weight: bolder;
+    padding: 30px 60px;
+    width: 160px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.radial-shadow{
+    position: relative;
+    box-shadow: 0px 0px 1px black;
+}
+
+div.radial-shadow:before,
+div.radial-shadow:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0px;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+div.radial-shadow:before{
+    bottom: 100%;
+    background: radial-gradient(
+            ellipse at 50% 150%,
+            rgba(0,0,0,0.6) 0%,
+            rgba(0,0,0,0) 80%
+        );
+}
+
+div.radial-shadow:after{
+    top: 100%;
+    background: radial-gradient(
+            ellipse at 50% -50%,
+            rgba(0,0,0,0.6) 0%,
+            rgba(0,0,0,0) 80%
+        );
+}
+
+div.radial-shadow:hover:before,
+div.radial-shadow:hover:after{
+    opacity: 1;
+}
