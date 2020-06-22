@@ -1,0 +1,24 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #A8CF45;
+    margin: 20% 40%;
+    padding: 5px 40px;
+    text-align: center;
+    font-weight: bolder;
+    width: 240px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.click:hover{
+    animation: 0.7s click 1;
+}
+
+@keyframes click{
+    25%, 75%{
+        transform: scale(0.8);
+    }50%{
+        transform: scale(1.2);
+    }
+}

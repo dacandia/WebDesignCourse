@@ -1,0 +1,43 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #A8CF45;
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    width: 240px;
+    height: 100px;
+    margin: 20% 40%;
+}
+
+p{
+    padding-top: 30px;
+}
+/*
+    animation-name: 
+        The name of the keyframe.
+    animation-duration:
+        Total time for the animation.
+    animation-iteration-count:
+        How many times the animation will be executed. To be a loop we need
+            to use a "infinite" value.
+    animation-delay:
+        delay for the animation. 
+
+*/
+div.box:hover{
+    animation: change_color 5s 1;
+}
+@keyframes change_color{
+    /*0%, 75%{
+        background: blue;
+    }
+    50%{
+        background: violet;
+        height: 500px;
+    }*/
+    from{
+        background: cadetblue;
+    }to{
+        background: darkgoldenrod;
+    }
+}
