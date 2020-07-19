@@ -1,0 +1,35 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(184, 236, 184);
+    margin: 20% 40%;
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px 30px;
+    width: 160px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.turn{
+    animation: 1s turn 1;
+    backface-visibility: visible;
+}
+
+@keyframes turn{
+    40%{
+        transform: perspective(300px)
+                    translateZ(120px)
+                    rotateY(170deg);
+    }50%{
+        transform: perspective(300px)
+                    translateZ(120px)
+                    rotateY(190px);
+    }80%{
+        transform: perspective(300px)
+                    translateZ(0px)            
+                    rotateY(360deg);
+    }100%{
+        transform: perspective(300px)
+                    rotateY(360deg);
+    }
+}

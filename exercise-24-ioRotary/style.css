@@ -1,0 +1,37 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #A8CF45;
+    margin: 20px 40%;
+    padding: 5px 40px;
+    text-align: center;
+    font-weight: bolder;
+    width: 240px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.inRotary{
+    animation: 1s inRotary 1;
+}
+
+@keyframes inRotary{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%)
+                    rotate(-260deg);
+    }
+}
+
+div.outRotary{
+    animation: 1s outRotary 1;
+}
+
+@keyframes outRotary{
+    100%{
+        opacity: 0;
+        transform: translateX(100%)
+                    rotate(260deg);
+
+    }
+}

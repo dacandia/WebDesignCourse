@@ -1,0 +1,68 @@
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #A8CF45;
+    margin: 20% 40%;
+    padding: 5px 40px;
+    text-align: center;
+    font-weight: bolder;
+    width: 240px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.bounceIn{
+    animation: 1s bounceInVerticalUp 1;
+}
+
+@keyframes bounceInHorizontalLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }50%{
+        opacity: 1;
+        transform: translateX(30px);
+    }70%{
+        opacity: 1;
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes bounceInHorizontalRight{
+    0%{
+        opacity: 0;
+        transform: translateX(2000px); 
+    }50%{
+        opacity: 1;
+        transform: translateX(-30px);
+    }70%{
+        opacity: 1;
+        transform: translateX(10px);
+    }
+}
+
+@keyframes bounceInVerticalDown{
+    0%{
+        opacity: 0;
+        transform: translateY(2000px); 
+    }50%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }70%{
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes bounceInVerticalUp{
+    0%{
+        opacity: 0;
+        transform: translateY(-2000px); 
+    }50%{
+        opacity: 1;
+        transform: translateY(30px);
+    }70%{
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
